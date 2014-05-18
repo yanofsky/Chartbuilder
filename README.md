@@ -20,12 +20,14 @@ Who is using Chartbuilder
 --------------------
 Other than Quartz, customized Chartbuilder created charts have been seen in many publications: 
 + [NPR](http://www.npr.org/blogs/parallels/2013/10/24/240493422/in-most-every-european-country-bikes-are-outselling-cars)
++ [The Wall Street Journal](http://blogs.wsj.com/korearealtime/2014/03/07/for-korean-kids-mobile-chat-rules/)
 + [CNBC](http://www.cnbc.com/id/101009116)
 + [The New Yorker](http://www.newyorker.com/online/blogs/currency/2013/12/2013-the-year-in-charts.html)
 + [The Press-Enterprise](http://blog.pe.com/political-empire/2013/07/31/ppic-poll-global-warming-a-concern-for-inland-voters/)
 + [New Hampshire Public Radio](http://nhpr.org/post/water-cleanup-commences-beede-story-shows-superfund-laws-flaws)
 + [CFO Magazine](http://ww2.cfo.com/the-economy/2013/11/retail-sales-growth-stalls/)
 + [Australian Broadcasting Corporation](http://www.abc.net.au/news/2013-10-11/nobel-prize3a-why-2001-was-the-best-year-to-win/5016010)
++ [Digiday](http://digiday.com/publishers/5-charts-tell-state-digital-publishing/)
 
 How to use Chartbuilder
 ------------------------
@@ -33,10 +35,17 @@ How to use Chartbuilder
 If you are not interested in customizing the styles of your charts use the hosted version: http://quartz.github.io/Chartbuilder/
 
 Alternatively: 
-
+####Download via github
 1. [Download source](https://github.com/Quartz/Chartbuilder/archive/master.zip) (and unzip)
-3. from the terminal navigate to the source folder (on a Mac: `cd ~/Downloads/Chartbuilder-master/`) 
-4. run `python -m SimpleHTTPServer`
+2. from the terminal navigate to the source folder (on a Mac: `cd ~/Downloads/Chartbuilder-master/`) 
+3. Start a webserver run `python -m SimpleHTTPServer`
+4. Open Google Chrome, Apple Safari, or Opera and navigate to [http://localhost:8000/](http://localhost:8000/)
+
+#### Install using bower
+1. from the terminal `bower install chartbuilder`
+2. copy the chartbuilder files to the top directory by running `cp -r bower_components/chartbuilder/* .`
+3. compile webfontloader `cd bower_components/webfontloader/; rake compile;`
+4. start a webserver `cd ../../; python -m SimpleHTTPServer;`
 5. Open Google Chrome, Apple Safari, or Opera and navigate to [http://localhost:8000/](http://localhost:8000/)
 
 
