@@ -62,7 +62,9 @@ var DateScaleSettings = React.createClass({
 			{ value: "10y", content: "10 years" },
 			{ value: "20y", content: "20 years" },
 			{ value: "50y", content: "50 years" },
-			{ value: "100y", content: "100 years" }
+			{ value: "100y", content: "100 years" },
+			{ value: "us-pe4", content: "US presidential election years" },
+			{ value: "us-me4", content: "US mid-term election years" }
 		],
 
 		// Use ids to look up appropriate date formatter from `util/process-dates.js`

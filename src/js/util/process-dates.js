@@ -205,6 +205,24 @@ var dateFrequencies = {
 		maxDate = d3.time.day.offset(maxDate, 1);
 		return interval.range(minDate, maxDate, 100);
 	},
+	"us-pe4": function(minDate, maxDate) {
+		// only label US presidential election years
+		var interval = d3.time.year;
+		maxDate = d3.time.day.offset(maxDate, 4);
+		var yearMod = minDate.getFullYear() % 4;
+		minDate = new Date(minDate.getFullYear() - yearMod,1,1)
+		return interval.range(minDate, maxDate, 4);
+	},
+	"us-me4": function(minDate, maxDate) {
+		// only label US midterm election years
+		var interval = d3.time.year;
+		maxDate = d3.time.day.offset(maxDate, 4);
+
+		return interval.range(minDate, maxDate, 4).map(function(d) {
+			var fullYear = d.getFullYear()
+			return new Date(fullYear - ((fullYear + 2) % 4),1,1)
+		});
+	}
 };
 
 function humanReadableNumber(n) {
